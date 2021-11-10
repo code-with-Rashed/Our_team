@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Raleway', sans-serif;
+    box-sizing:border-box;
+}
+.flex{
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.inner{
+    max-width: 1400px;
+    margin:0 auto;
+}
+
+/* Our Team */
+.container{
+  width:100%;
+  height:100vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.heading{
+    width:100%;
+    padding-top:80px;   
+}
+.heading h2{
+    font-size: 40px;
+}
+.heading p{
+    font-size: 25px;
+}
+.team-wrap{
+    width:22%;
+    margin-top:100px;
+    cursor: pointer;
+}
+.team-img img{
+    transition:all 0.2s ease-in-out;
+    width:100%;
+    overflow: hidden;
+}
+.team-member, .team-img {
+    position: relative;
+    overflow: hidden;
+}
+.team-title{
+    margin: 30px 0 7px;
+    font-size: 20px;
+}
+.overlay{
+    background:rgba(20,20,20,.7);
+    position: absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:all 0.2s ease-in-out;
+}
+.team-details{
+    opacity: 0;
+    position:absolute;
+    top:50%;
+    left:0;
+    padding:5%;
+    overflow: hidden;
+    width:100%;
+    z-index: 2;
+    transition: all 0.2s ease-in-out;
+}
+.text-center{
+    text-align: center;
+}
+.team-details p{
+    color:#fff;
+}
+.team-img:hover .team-details{
+    opacity: 1;
+    margin-top:-80px;
+}
+.team-img:hover .overlay{
+    opacity: 1;
+}
+.socials a{
+    display:inline-block;
+    width:37px;
+    height: 37px;
+    margin-top:45%;
+    cursor: pointer;
+    background:transparent;
+}
+.socials span{
+    line-height: 37px;
+    color:#fff;
+    font-size: 1rem;
+    width:37px;
+    height:37px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+.socials a:hover span{
+    color:rgb(17,13,13);
+    background:#fff;
+}
+@media only screen and (max-width:768px){
+    .main-box{
+        display:flex;
+        flex-direction: column;
+    }
+    .team-wrap{
+        width:50%;
+        margin-top:75px;
+    }
+    .team-details p{
+        font-size:14px;
+    }
+}
